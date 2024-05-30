@@ -1,0 +1,10 @@
+variable "google_project" {}
+variable "google_region" {}
+variable "aws_region" {}
+variable "bucket_name" {}
+variable "ssl_certificate_name" {}
+variable "url_map_name" {}
+variable "target_proxy_name" {}
+variable "forwarding_rule_name" {}
+variable "domain_name" {}
+variable "subdomain_name" {}
