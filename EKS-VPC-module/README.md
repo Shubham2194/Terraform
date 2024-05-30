@@ -1,10 +1,4 @@
-
-# Provisioning the Amazon EKS cluster using Terraform
 This repository contains the terraform file code, which we can use to provision the Amazon EKS cluster.
-
-## Architecture Diagram
-
-![Architecture Diagram](https://cdn-images-1.medium.com/max/800/1*T5IRoSoiqT8qnYLUprsRUQ.png)
 
 ``` 
 cd kube_terraform/ToDo-App/
