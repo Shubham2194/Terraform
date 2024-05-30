@@ -1,0 +1,5 @@
+name = "qa-couchbase"
+type = "e2-standard-4"
+zone = "asia-south1-a"
+project = "app"
+region = "asia-south1"
