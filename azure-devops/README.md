@@ -57,6 +57,7 @@ Now open the same pipeline in azure devops and add the variables (AWS_ACCESS_KEY
 Step 8:
 Start with the Variables and Steps section (use below code)
 
+```yaml
 trigger:
 - main
 
@@ -95,6 +96,7 @@ steps:
 Step 9:
 Now add the another script to Build , tag and Puch Docker image to ECR
 
+```yaml
 - script: |
     echo "Build and push Docker image"
     docker build -t $(registry) .
@@ -108,21 +110,16 @@ Step 10:
 (prerequisites : Repo should have Chart available)
 Now Add the CD step where we Fetch the Kubeconfig and deploy helm chart with the new tag
 
-
+```yaml
 - script: |
- 
     aws eks update-kubeconfig --name $(eksClusterName) --region $(awsRegion)
-  
     helm upgrade --install $(serviceName) chart/$(serviceName) --namespace $(namespace) --set image.repository=$(imageRepository) --set image.tag=$(imageTag)
   
   displayName: 'Deploy to EKS'
 
    env:
-
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
-
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
-
     AWS_REGION: $(awsRegion)
 
 
@@ -132,8 +129,9 @@ So the whole pipeline code look like this -
 
 azure-pipelines.yml
 
-trigger:
 
+```yaml
+trigger:
 - main
 
 pool:
