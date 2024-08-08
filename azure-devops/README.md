@@ -101,7 +101,7 @@ steps:
   displayName: 'Install dependencies and configure environment'
 ```
 
-*** SAVE it and RUN the Pipeline ***
+**SAVE it and RUN the Pipeline**
 
 
 ![image](https://github.com/user-attachments/assets/ef1f875b-d0d9-4fc3-b8e5-0be1da6bb9e8)
