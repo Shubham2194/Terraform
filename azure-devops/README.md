@@ -84,6 +84,7 @@ steps:
     echo "AWS CLI is configured. Current version:"
     aws --version
   displayName: 'Install dependencies and configure environment'
+```
 
 *** SAVE it and RUN the Pipeline ***
 
@@ -104,7 +105,7 @@ Now add the another script to Build , tag and Puch Docker image to ECR
     docker tag $(registry):latest $(imageRepository):$(imageTag)
     docker push $(imageRepository):$(imageTag)
   displayName: 'Build and push Docker image'
-
+```
 
 Step 10:
 (prerequisites : Repo should have Chart available)
@@ -116,12 +117,11 @@ Now Add the CD step where we Fetch the Kubeconfig and deploy helm chart with the
     helm upgrade --install $(serviceName) chart/$(serviceName) --namespace $(namespace) --set image.repository=$(imageRepository) --set image.tag=$(imageTag)
   
   displayName: 'Deploy to EKS'
-
    env:
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
     AWS_REGION: $(awsRegion)
-
+```
 
 Step 11:
 
@@ -131,6 +131,7 @@ azure-pipelines.yml
 
 
 ```yaml
+
 trigger:
 - main
 
@@ -175,6 +176,7 @@ steps:
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
     AWS_REGION: $(awsRegion)
+```
 *** NOW save and RUN ***  
 and check the output 
 
