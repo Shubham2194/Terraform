@@ -104,9 +104,12 @@ steps:
 **SAVE it and RUN the Pipeline**
 
 
+
 ![image](https://github.com/user-attachments/assets/ef1f875b-d0d9-4fc3-b8e5-0be1da6bb9e8)
 
+
 ![image](https://github.com/user-attachments/assets/5e58077b-6d04-460a-8fcb-628c7e8ce3a4)
+
 
 
 Step 9:
@@ -123,6 +126,7 @@ Now add the another script to Build , tag and Puch Docker image to ECR
 ```
 
 Step 10:
+
 (prerequisites : Repo should have Chart available)
 Now Add the CD step where we Fetch the Kubeconfig and deploy helm chart with the new tag
 
