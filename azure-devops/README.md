@@ -108,23 +108,32 @@ Step 10:
 (prerequisites : Repo should have Chart available)
 Now Add the CD step where we Fetch the Kubeconfig and deploy helm chart with the new tag
 
-# CD Steps
 
 - script: |
+ 
     aws eks update-kubeconfig --name $(eksClusterName) --region $(awsRegion)
+  
     helm upgrade --install $(serviceName) chart/$(serviceName) --namespace $(namespace) --set image.repository=$(imageRepository) --set image.tag=$(imageTag)
+  
   displayName: 'Deploy to EKS'
-  env:
+
+   env:
+
     AWS_ACCESS_KEY_ID: $(AWS_ACCESS_KEY_ID)
+
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
+
     AWS_REGION: $(awsRegion)
 
+
 Step 11:
+
 So the whole pipeline code look like this - 
 
 azure-pipelines.yml
 
 trigger:
+
 - main
 
 pool:
