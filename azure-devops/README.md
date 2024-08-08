@@ -1,8 +1,10 @@
 
-**Azure devOps Work-around
- - Target Enviroment : EKS
- - END to END CI/CD
- - Helm Charts**
+**Azure devOps Work-around**
+ **- Target Enviroment : EKS**
+ **- END to END CI/CD**
+ **- Helm Charts**
+
+ **Prerequisites: AWS acccount , Azure devops , ECR registry , Helm chart(pushed to repo)**
 
 Step 1: 
 
@@ -12,11 +14,13 @@ Go to Your azure devOps Portal and create a new Project:
 
 
 Step 2:
+
 Find the pipelines > Pipelines in the left pannel:
 
 ![image](https://github.com/user-attachments/assets/f7986fbf-c707-4554-b041-9971cebb7be3)
 
 Step 3: 
+
 Click on New piepline and choose the Github (as our code is present in Github )
 
 ![image](https://github.com/user-attachments/assets/2843cb41-d8b1-4d29-aaa6-85e42b7dd420)
@@ -26,6 +30,7 @@ Click on New piepline and choose the Github (as our code is present in Github )
 
 
 Step 4: 
+
 Select the Repo for which you want to setup your piepline and select the Stater pipeline  
 
 ![image](https://github.com/user-attachments/assets/d3cdd8f6-3b85-425f-be3c-17fb25ecb554)
@@ -177,12 +182,12 @@ steps:
     AWS_SECRET_ACCESS_KEY: $(AWS_SECRET_ACCESS_KEY)
     AWS_REGION: $(awsRegion)
 ```
-*** NOW save and RUN ***  
-and check the output 
+**save and RUN**  
+**check the output**
 
 
 ![image](https://github.com/user-attachments/assets/b07627d9-7919-4223-917f-9233beabb9ce)
 
 
-We have Successfully deployed our HELM chart in the EKS env With azure DevOps !!
+**We have Successfully deployed our HELM chart in the EKS env With Azure DevOps !!**
 
