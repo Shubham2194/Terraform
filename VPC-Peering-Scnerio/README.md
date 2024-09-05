@@ -121,3 +121,8 @@ cidr-private       = ["10.0.1.0/24", "10.0.2.0/24"]
 
 this will modify the VPC with different CIDR range and save us !!!
 
+
+Now i Went back to my SAAS DB service and try peering again with my VPC id and finally it Peered !!
+
+![image](https://github.com/user-attachments/assets/e9b25a46-5f8a-4b72-8ca0-7c51c0e7eb9f)
+
