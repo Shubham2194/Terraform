@@ -1,3 +1,7 @@
+![image](https://github.com/user-attachments/assets/aea60f6a-08d3-46fe-8e6e-6cd66765de95)
+
+
+
 Scnerio: 
 Let's say we have terraform workspace configured and have dev,stage and prod workspaces.
 
