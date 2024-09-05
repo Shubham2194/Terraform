@@ -1,6 +1,7 @@
 Scnerio: 
 Let's say we have terraform workspace configured and have dev,stage and prod workspaces.
-Using this we are creating our whole infra on AWS (i.e S3, ECR , EKS, CDN , security groups)
+
+Using workspaces we are creating our whole infra on AWS (i.e S3, ECR , EKS, CDN , security groups)
 
 we used CIDR for VPC as follow:
 terraform.tfvars:
@@ -47,6 +48,7 @@ module "vpc" {
 (we have multiple variable for all the resources , but we are focusing on these for now)
 
 We aaplied one by one and create three environment (dev,stage and prod):
+
 these are the vpc's on AWS console 
 
 
