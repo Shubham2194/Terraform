@@ -51,6 +51,8 @@ We aaplied one by one and create three environment (dev,stage and prod):
 
 these are the vpc's on AWS console 
 
+(fs-dev.fs-stage and fs-prod,ignore others)
+
 
 ![image](https://github.com/user-attachments/assets/e6f60525-f924-43e6-8537-3caad1cc8930)
 
