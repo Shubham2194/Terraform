@@ -43,15 +43,20 @@ terraform {
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "3.60.0"
+      version = "5.76.0"
     }
-
   }
-  required_version = ">= 0.13"
 }
+
+provider "aws" {
+  region = "ap-southeast-1"
+}
+
+
 ```
 
 Then run terraform init command to initialize the terraform
+
 
 
 
