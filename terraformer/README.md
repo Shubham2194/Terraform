@@ -35,4 +35,45 @@ terraformer --version
 
 STEP2 :
 
+Now, let’s learn about importing the main AWS resources that are most frequently used. 
+To do this, create an empty directory eg. terraformer, and add a main.tf file with the following values:
+
+```
+terraform {
+  required_providers {
+    aws = {
+      source  = "hashicorp/aws"
+      version = "3.60.0"
+    }
+
+  }
+  required_version = ">= 0.13"
+}
+```
+
+Then run terraform init command to initialize the terraform
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
